@@ -1,0 +1,68 @@
+Passwords_andral=["and123","and098","and456"]
+Passwords_hazel=["haz123","haz098","haz456"]
+Passwords_trinita=["tri123","tri098","tri456"]
+andral=0
+hazel=0
+trinita=0
+'''def continuee():
+    x=input("Would you like to continue?")
+    if x=="Y" or x=="Yes" or x=="Y":
+        Check()
+    else:
+        print("Exitting")'''
+
+def Check():
+    while True:
+        User=int(input("Enter User ID\n1.andral\n2.hazel\n3.trinita\n"))
+        if(User==1):
+            global andral
+            if andral<5:
+                Pass=input("Enter Password:\n")
+                if Pass in Passwords_andral:
+                    print("Access Granted")
+                    print("Welcome andral\n")
+                    #continuee()
+
+                else:
+                    print("Wrong Password")
+                    andral+=1
+                    print("Attempts Left:",5-andral,"\n")
+            else:
+                print("Account Blocked\n")
+
+        elif(User==2):
+            global hazel
+            if hazel<5:
+                Pass=input("Enter Password:\n")
+                if Pass in Passwords_steve:
+                    print("Access Granted")
+                    print("Welcome hazel\n")
+                    #continuee()
+
+                else:
+                    print("Wrong Password")
+                    hazel+=1
+                    print("Attempts Left:",5-hazel,"\n")
+            else:
+                print("Account Blocked\n")
+
+        elif(User==3):
+            global trinita
+            if trinita<5:
+                Pass=input("Enter Password:\n")
+                if Pass in Passwords_tom:
+                    print("Access Granted")
+                    print("Welcome tom\n")
+                    #continuee()
+
+                else:
+                    print("Wrong Password")
+                    trinita+=1
+                    print("Attempts Left:",5-trinita,"\n")
+            else:
+                print("Account Blocked\n")
+
+        else:
+            print("User not Found\n")
+   
+Check()
